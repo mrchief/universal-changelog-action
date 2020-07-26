@@ -9,7 +9,7 @@ jobs:
     if: github.event.pull_request.merged == true && contains(toJSON(github.event.pull_request.labels.*.name), '"autorelease"')
     runs-on: ubuntu-latest
     env:
-      manifest_file: "manifest.yml"
+      manifest_file: "package.json"
       changelog_file: "CHANGELOG.md"
     steps:
       - uses: actions/checkout@v2
@@ -40,5 +40,4 @@ jobs:
           body: ${{ steps.changelog.outputs.changelog}}
           draft: false
           prerelease: false
-          # An optional tag for the release. If this is omitted the git ref will be used (if it is a tag).
           token: ${{ secrets.GITHUB_TOKEN }}
