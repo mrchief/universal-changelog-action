@@ -22,9 +22,9 @@ jobs:
         uses: rubenfiszel/autochangelog-action@v0.13.0
         with:
           changelog_file: "./CHANGELOG.md"
-          manifest_file: "./version.yml"
+          manifest_file: "./package.json"
           dry_run: false
-          issues_url_prefix: "https://github.com/mrchief/iglu-lint-action/issues"
+          issues_url_prefix: "https://github.com/mrchief/universal-changelog-action/issues"
           tag_prefix: "v"
       - name: Create Pull Request
         id: cpr
