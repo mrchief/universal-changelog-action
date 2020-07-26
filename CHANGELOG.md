@@ -1,3 +1,9 @@
+# 1.0.2 - 26-7-2020
+
+### 🧰 Maintenance
+
+- Improve marketplace branding
+
 # 1.0.1 - 26-7-2020
 
 ### 🧰 Maintenance
