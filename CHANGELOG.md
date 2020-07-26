@@ -1,3 +1,8 @@
+# 1.0.5 - 26-7-2020
+### 🐛 Bug Fixes
+    
+- Do not ignore dist
+
 # 1.0.4 - 26-7-2020
 
 ### 🧰 Maintenance
