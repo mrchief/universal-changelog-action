@@ -1,5 +1,9 @@
 name: "Universal Changelog Generator"
-description: "Generates changelog based on angular conventions. See more https://github.com/conventional-changelog/conventional-changelog"
+description: "Unopinionated changelog based on your conventional commits. It doesn't force you to use semver or any specific versioning strategy."
+author: "Hrusikesh Panda <mrchief_2000@yahoo.com>"
+branding:
+  icon: "book"
+  color: "blue"
 inputs:
   commits:
     description: "List of Commits (https://developer.github.com/v3/repos/commits/#list-commits)"
