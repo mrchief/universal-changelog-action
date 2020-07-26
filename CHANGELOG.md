@@ -1,3 +1,9 @@
+# 1.0.4 - 26-7-2020
+
+### 🧰 Maintenance
+
+- Fix version parsing during release
+
 # 1.0.3 - 26-7-2020
 
 ### 🐛 Bug Fixes
