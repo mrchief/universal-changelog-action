@@ -1,0 +1,25 @@
+{
+  "name": "universal-changelog-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js -m",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hrusikesh Panda <mrchief_2000@yahoo.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^4.0.0",
+    "conventional-changelog-angular": "^5.0.10",
+    "conventional-changelog-writer": "^4.0.16",
+    "conventional-commits-parser": "^3.1.0",
+    "get-stream": "^5.1.0",
+    "into-stream": "^5.1.1"
+  }
+}

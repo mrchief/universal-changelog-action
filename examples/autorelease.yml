@@ -1,0 +1,76 @@
+name: Auto Release
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Latest Release
+        uses: actions/github-script@v2
+        id: release
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const releases = await github.repos.listReleases({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
+
+            const tags = await github.repos.listTags({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
+
+            const latestRelease = releases.data.find(el => !el.draft && !el.prerelease)
+            const latestTag = tags.data.find(el => el.name === latestRelease.tag_name)
+
+            core.setOutput("release", latestRelease)
+            core.setOutput("tag", latestTag)
+
+      - name: Get Commits Since
+        id: commits
+        uses: actions/github-script@v2
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const commits = await github.repos.listCommits({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: '${{ steps.release.outputs.tag.commit.sha }}'
+            })
+
+            core.setOutput("commits", commits.data)
+
+      - name: Set next release name
+        run: |
+          # ISO8601 UTC timestamp (without colons, filesafe)
+          echo "::set-env name=NEXT_TAG_NAME::$(date -u +%FT%H%M%SZ)"
+          echo "::set-env name=NEXT_RELEASE_NAME::$(date -u '+%F %TZ') "
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Changelog
+        id: changelog
+        uses: ./.github/actions/changelog-generator
+        with:
+          previousReleaseTagNameOrSha: ${{ fromJSON(steps.release.outputs.tag).name }}
+          nextReleaseTagName: ${{ env.NEXT_TAG_NAME }}
+          nextReleaseName: ${{ env.NEXT_RELEASE_NAME }}
+          commits: ${{ steps.commits.outputs.commits }}
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.NEXT_RELEASE_NAME }}
+          release_name: Release ${{ env.NEXT_RELEASE_NAME }}
+          body: ${{ steps.changelog.outputs.changelog }}
+          draft: true
+          prerelease: false

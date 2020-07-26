@@ -1,0 +1,17 @@
+name: "Changelog Generator"
+description: "Generates changelog based on angular conventions. See more https://github.com/conventional-changelog/conventional-changelog"
+inputs:
+  commits:
+    description: "List of Commits (https://developer.github.com/v3/repos/commits/#list-commits)"
+  previousReleaseTagNameOrSha:
+    description: "Tag Name or Sha of latest release"
+  nextReleaseTagName:
+    description: "Tag Name of next release"
+  nextReleaseName:
+    description: "Friendly Name of next release"
+outputs:
+  changelog:
+    description: "Changelog in markdown format"
+runs:
+  using: "node12"
+  main: "dist/index.js"
