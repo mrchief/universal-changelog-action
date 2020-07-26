@@ -1,12 +1,7 @@
-# 0.1.0 - 26-7-2020
-
-## Unclassified Changes
-
-- Initial commit
+# 1.0.0 - 26-7-2020
 
 ## Changes
 
 ### Features
-    
-- Generate changelog for any versioning
 
+- Generate changelog for any versioning
