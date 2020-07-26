@@ -1,5 +1,5 @@
 # 1.0.5 - 26-7-2020
-### Bug Fixes
+### 🐛 Bug Fixes
     
 - Do not ignore dist
 
