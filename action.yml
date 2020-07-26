@@ -1,4 +1,4 @@
-name: "Changelog Generator"
+name: "Universal Changelog Generator"
 description: "Generates changelog based on angular conventions. See more https://github.com/conventional-changelog/conventional-changelog"
 inputs:
   commits:
