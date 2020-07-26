@@ -1,5 +1,5 @@
 name: "Universal Changelog Generator"
-description: "Unopinionated changelog based on your conventional commits. It doesn't force you to use semver or any specific versioning strategy."
+description: "Unopinionated changelog for your conventional commits. Doesn't force you to use semver or any specific versioning strategy."
 author: "Hrusikesh Panda <mrchief_2000@yahoo.com>"
 branding:
   icon: "book"
