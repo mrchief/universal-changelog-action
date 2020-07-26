@@ -1,3 +1,8 @@
+# 1.0.3 - 26-7-2020
+### Bug Fixes
+    
+- Description less than 125 chars
+
 # 1.0.2 - 26-7-2020
 
 ### 🧰 Maintenance
