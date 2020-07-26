@@ -2,6 +2,6 @@
 
 ## Changes
 
-### Features
+### ✨ Features
 
 - Generate changelog for any versioning
