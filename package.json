@@ -17,7 +17,6 @@
   "license": "ISC",
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
-    "cpy-cli": "^3.1.1",
     "jest": "^26.2.2",
     "rimraf": "^3.0.2"
   },

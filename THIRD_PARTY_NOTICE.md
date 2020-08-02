@@ -35,7 +35,3 @@ https://github.com/handlebars-lang/handlebars.js/blob/master/LICENSE
 Package: [rimraf](https://github.com/isaacs/rimraf)\
 License: ISC\
 https://github.com/isaacs/rimraf/blob/master/LICENSE
-
-Package: [cpy-cli](https://github.com/sindresorhus/cpy-cli)\
-License: ISC\
-https://github.com/sindresorhus/cpy-cli/blob/master/license
