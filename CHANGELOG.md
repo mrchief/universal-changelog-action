@@ -2,6 +2,7 @@
 ### Bug Fixes
     
 - Add missing files
+- Add missing files
 ### Features
     
 - Generate configurable changelog
