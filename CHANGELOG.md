@@ -2,6 +2,7 @@
 
 ## Unclassified Changes
 
+- debug: Remove console logs
 - debug: Add logs
 - debug: Can't pass long strings thru the UI
 
