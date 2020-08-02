@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "ncc build index.js -m",
-    "postbuild": "cpy lib/templates dist/templates",
+    "postbuild": "cpy templates dist/templates",
     "test": "jest"
   },
   "keywords": [],
