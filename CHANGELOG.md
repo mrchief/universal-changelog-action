@@ -1,3 +1,11 @@
+# 1.1.0 - 2-8-2020
+### Bug Fixes
+    
+- Add missing files
+### Features
+    
+- Generate configurable changelog
+
 # 1.0.5 - 26-7-2020
 ### 🐛 Bug Fixes
     

@@ -1,13 +1,13 @@
 {
   "name": "universal-changelog-generator",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "",
   "source": "index.js",
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "ncc build index.js -m",
-    "postbuild":"cpy lib/templates dist/templates",
+    "postbuild": "cpy lib/templates dist/templates",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
