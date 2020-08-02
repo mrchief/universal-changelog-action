@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generates changelog 1`] = `
+"## [2020-08-02T034148Z](https://github.com/owner/repo/releases/tag/2020-08-02T034148Z)
+
+## Release 2020-08-02T034148Z
+
+### 💥 Breaking Changes
+
+-  **pencil:** GH API doesn't return commits after SHA, so use since ([\`b09fc01\`](https://github.com/mrchief/actions-test/commit/b09fc019cb9497d31d483f66b796b4ad5faa14a4))
+
+### ✨ Features
+
+-  **package:** Remove extra call that's not needed anymore ([\`9eece8c\`](https://github.com/mrchief/actions-test/commit/9eece8cda610273911c0396ea016b618ce040a00))
+
+### 🐛 Fixes
+
+-  **build:** Correctly grab sha of last tag ([\`9d10351\`](https://github.com/mrchief/actions-test/commit/9d10351f05d7243fdfba582ae6d9ef3da470573d))
+- Syntax error ([\`90abd66\`](https://github.com/mrchief/actions-test/commit/90abd66af70b11fe0c25462e28cd33fed7e51d46))
+- create tage ([\`445fa44\`](https://github.com/mrchief/actions-test/commit/445fa445c7fecec8b2ca976c69402e502a9259a2))
+-  **typo:** owner repo refs ([\`f003b15\`](https://github.com/mrchief/actions-test/commit/f003b15e43ceca7dbb8e50c4291c656c743a9614))
+- branch path on pr close ([\`ba454b9\`](https://github.com/mrchief/actions-test/commit/ba454b933d8a4179cc135fc64e6e5dfafd66d345))
+- Typo ([\`c17900c\`](https://github.com/mrchief/actions-test/commit/c17900c9f0ea0d8d4c3e1dbf0d847df6bf2196ce))
+- Properly set branch name ([\`5128636\`](https://github.com/mrchief/actions-test/commit/51286363ff81faee2fcf5c0ecc666817ba183f21))
+- Use head ref to get only branch name ([\`47d9985\`](https://github.com/mrchief/actions-test/commit/47d998526fd696cc76c7b5e1f9168cf0f6ea1dd1))
+- Correct sha reference ([\`7088503\`](https://github.com/mrchief/actions-test/commit/70885039103aa8556933aac4376b6bc5aecbecd4))
+
+### 🛠 Maintenance
+
+-  **ci:** Release 2020-07-27 02:46:52Z (#16) ([\`1fc7684\`](https://github.com/mrchief/actions-test/commit/1fc76845b2b4679968d97951f31d7f3759d6b86a))
+-  **package:** Remove extra call that's not needed anymore ([\`9eece8c\`](https://github.com/mrchief/actions-test/commit/9eece8cda610273911c0396ea016b618ce040a00))
+-  **pencil:** GH API doesn't return commits after SHA, so use since ([\`b09fc01\`](https://github.com/mrchief/actions-test/commit/b09fc019cb9497d31d483f66b796b4ad5faa14a4))
+-  **build:** Correctly grab sha of last tag ([\`9d10351\`](https://github.com/mrchief/actions-test/commit/9d10351f05d7243fdfba582ae6d9ef3da470573d))
+-  **build:** Cleanup log statements, extraneous set outputs ([\`c517031\`](https://github.com/mrchief/actions-test/commit/c517031b0b943ddc904ef9c98d8f1d7786ba0618))
+-  **ci:** Release 2020-07-27 00:55:24Z (#12) ([\`65902bb\`](https://github.com/mrchief/actions-test/commit/65902bb43a38a8a6d935f3fb0636abdd4b883219))
+- Syntax error ([\`90abd66\`](https://github.com/mrchief/actions-test/commit/90abd66af70b11fe0c25462e28cd33fed7e51d46))
+- Release 2020-07-26 21:22:51Z (#11) ([\`04d76a1\`](https://github.com/mrchief/actions-test/commit/04d76a113c386ce811207cc5d86086db427e0188))
+- Only use update release ([\`8259634\`](https://github.com/mrchief/actions-test/commit/82596346b7bfcc975f2525b4dbe25e9e617a0707))
+-  **build:** Release 2020-07-26 21:16:27Z (#10) ([\`7dcca52\`](https://github.com/mrchief/actions-test/commit/7dcca524d2690027d15e61f60718e3a17563c232))
+- create tage ([\`445fa44\`](https://github.com/mrchief/actions-test/commit/445fa445c7fecec8b2ca976c69402e502a9259a2))
+- Release 2020-07-26 21:12:09Z (#9) ([\`3ccfa79\`](https://github.com/mrchief/actions-test/commit/3ccfa7909223aebcb56407ecd1777c2f56b7e9af))
+-  **typo:** owner repo refs ([\`f003b15\`](https://github.com/mrchief/actions-test/commit/f003b15e43ceca7dbb8e50c4291c656c743a9614))
+- Release 2020-07-26 21:11:00Z (#8) ([\`7a3aec8\`](https://github.com/mrchief/actions-test/commit/7a3aec868a1695b3f86b719eea1413023f25953d))
+- Release 2020-07-26 21:08:41Z (#7) ([\`6eacff8\`](https://github.com/mrchief/actions-test/commit/6eacff88368a0d91af3c6f8638c43241d9453c07))
+- branch path on pr close ([\`ba454b9\`](https://github.com/mrchief/actions-test/commit/ba454b933d8a4179cc135fc64e6e5dfafd66d345))
+- Release 2020-07-26 21:06:45Z (#6) ([\`e0aa78b\`](https://github.com/mrchief/actions-test/commit/e0aa78b02869398ab435635817fff450501bdd3a))
+- Release 2020-07-26 21:04:33Z (#5) ([\`d795e78\`](https://github.com/mrchief/actions-test/commit/d795e7816c5d3cbaf5451d19f93b8a10168beb6f))
+- Typo ([\`c17900c\`](https://github.com/mrchief/actions-test/commit/c17900c9f0ea0d8d4c3e1dbf0d847df6bf2196ce))
+- Create PR manually ([\`2447ee6\`](https://github.com/mrchief/actions-test/commit/2447ee63669c1413d47838af82c7ae31bc2c8d1a))
+- Properly set branch name ([\`5128636\`](https://github.com/mrchief/actions-test/commit/51286363ff81faee2fcf5c0ecc666817ba183f21))
+- Use head ref to get only branch name ([\`47d9985\`](https://github.com/mrchief/actions-test/commit/47d998526fd696cc76c7b5e1f9168cf0f6ea1dd1))
+- Commit manually ([\`565d189\`](https://github.com/mrchief/actions-test/commit/565d189cb06f50d9c9765bad25eb6381f7f9ae3a))
+- Git status ([\`c2c1a0e\`](https://github.com/mrchief/actions-test/commit/c2c1a0ec2026c3987bc51f8e65fad99f1e1a74fe))
+- Uncommitted changes ([\`e6a9c3a\`](https://github.com/mrchief/actions-test/commit/e6a9c3a0c94d4f4347e39afac26b9d88c9874c87))
+- More robust way of updating changelog ([\`61e831c\`](https://github.com/mrchief/actions-test/commit/61e831c02b2c6fa62a5f027a78a9efa16bb4656e))
+- Create auto pull request ([\`b6bb37c\`](https://github.com/mrchief/actions-test/commit/b6bb37c970563ced137641ba6e8671296298df31))
+- update job name ([\`d2867d8\`](https://github.com/mrchief/actions-test/commit/d2867d87c12d7091ec45d5e5313327add0492ff0))
+- Add open/close workflows ([\`8d7a6da\`](https://github.com/mrchief/actions-test/commit/8d7a6da99f6145a32da789891c1aac53706ff460))
+- Correct sha reference ([\`7088503\`](https://github.com/mrchief/actions-test/commit/70885039103aa8556933aac4376b6bc5aecbecd4))
+"
+`;
