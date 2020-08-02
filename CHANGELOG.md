@@ -1,6 +1,7 @@
 # 1.1.0 - 2-8-2020
 ### Bug Fixes
     
+- Get owner/repo logic
 - Add missing files
 - Add missing files
 ### Features
