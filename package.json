@@ -4,6 +4,9 @@
   "description": "",
   "source": "index.js",
   "main": "dist/index.js",
+  "files": [
+    "templates/**"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "ncc build index.js -m",
