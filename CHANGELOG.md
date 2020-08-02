@@ -1,3 +1,32 @@
+# 1.1.0 - 2-8-2020
+
+## Unclassified Changes
+
+- debug: Remove console logs
+- debug: Add logs
+- debug: Can't pass long strings thru the UI
+
+## Changes
+
+### Bug Fixes
+    
+- Alternate approach to ensure template can be located
+- Alternate approach to ensure template can be located
+- Specify correct path when used externally
+- Include templates for install
+- Move templates to root so path matches during dev/release
+- Handle non conventional commits
+- Checkout so that files are available
+- Correct path of template
+- Export method
+- Remove filter as we no longer use conventional-commit-filter
+- Get owner/repo logic
+- Add missing files
+- Add missing files
+### Features
+    
+- Generate configurable changelog
+
 # 1.0.5 - 26-7-2020
 ### 🐛 Bug Fixes
     
