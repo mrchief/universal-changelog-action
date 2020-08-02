@@ -10,6 +10,7 @@
 
 ### Bug Fixes
     
+- Move templates to root so path matches during dev/release
 - Handle non conventional commits
 - Checkout so that files are available
 - Correct path of template
