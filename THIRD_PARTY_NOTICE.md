@@ -20,26 +20,14 @@ Package: [@actions/github](https://github.com/actions/toolkit/tree/main/packages
 License: MIT License\
 https://github.com/actions/toolkit/blob/master/LICENSE.md
 
-Package: [conventional-changelog-angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular)\
-License: ISC\
-https://github.com/conventional-changelog/conventional-changelog/blob/master/LICENSE.md
-
-Package: [conventional-changelog-writer](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-writer)\
-License: ISC\
-https://github.com/conventional-changelog/conventional-changelog/blob/master/LICENSE.md
-
 Package: [conventional-commits-parser](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-commits-parser)\
 License: ISC\
 https://github.com/conventional-changelog/conventional-changelog/blob/master/LICENSE.md
 
-Package: [get-stream](https://github.com/sindresorhus/get-stream)\
-License: MIT\
-https://github.com/sindresorhus/get-stream/blob/master/license
-
-Package: [into-stream](https://github.com/sindresorhus/into-stream)\
-License: MIT\
-https://github.com/sindresorhus/into-stream/blob/master/license
-
 Package: [@zeit/ncc](https://github.com/vercel/ncc)\
 License: MIT\
 https://github.com/vercel/ncc/blob/master/LICENSE
+
+Package: [handlebars](https://github.com/handlebars-lang/handlebars.js)\
+License: MIT\
+https://github.com/handlebars-lang/handlebars.js/blob/master/LICENSE

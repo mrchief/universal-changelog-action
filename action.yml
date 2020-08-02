@@ -8,11 +8,14 @@ inputs:
   commits:
     description: "List of Commits (https://developer.github.com/v3/repos/commits/#list-commits)"
   previousReleaseTagNameOrSha:
-    description: "Tag Name or Sha of latest release"
+    description: "Tag Name or SHA of previous release"
   nextReleaseTagName:
     description: "Tag Name of next release"
   nextReleaseName:
     description: "Friendly Name of next release"
+  configFilePath:
+    description: "Path to custom config (optional)"
+    required: false
 outputs:
   changelog:
     description: "Changelog in markdown format"
