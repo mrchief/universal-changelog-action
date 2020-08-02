@@ -2,24 +2,26 @@
   "name": "universal-changelog-generator",
   "version": "1.0.5",
   "description": "",
-  "main": "index.js",
+  "source": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "ncc build index.js -m",
+    "postbuild":"cpy lib/templates dist/templates",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Hrusikesh Panda <mrchief_2000@yahoo.com>",
   "license": "ISC",
   "devDependencies": {
-    "@zeit/ncc": "^0.22.3"
+    "@zeit/ncc": "^0.22.3",
+    "cpy-cli": "^3.1.1",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
     "@actions/core": "^1.2.4",
     "@actions/github": "^4.0.0",
-    "conventional-changelog-angular": "^5.0.10",
-    "conventional-changelog-writer": "^4.0.16",
     "conventional-commits-parser": "^3.1.0",
-    "get-stream": "^5.1.0",
-    "into-stream": "^5.1.1"
+    "handlebars": "^4.7.6"
   }
 }
