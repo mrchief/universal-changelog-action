@@ -1,3 +1,10 @@
+# 1.1.1 - 2-8-2020
+
+## Changes
+
+### 🧰 Maintenance
+ - Remove redundant tag header
+
 # 1.1.0 - 2-8-2020
 
 ## Unclassified Changes
