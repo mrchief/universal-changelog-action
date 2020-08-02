@@ -1,6 +1,7 @@
 # 1.1.0 - 2-8-2020
 ### Bug Fixes
     
+- Remove filter as we no longer use conventional-commit-filter
 - Get owner/repo logic
 - Add missing files
 - Add missing files
