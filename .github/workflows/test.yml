@@ -1,0 +1,38 @@
+name: Test action
+
+on:
+  workflow_dispatch:
+    inputs:
+      commits:
+        description: "List of Commits (https://developer.github.com/v3/repos/commits/#list-commits)"
+      previousReleaseTagNameOrSha:
+        description: "Tag Name or SHA of previous release"
+      nextReleaseTagName:
+        description: "Tag Name of next release"
+      nextReleaseName:
+        description: "Friendly Name of next release"
+      configFilePath:
+        description: "Path to custom config (optional)"
+        required: false
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Changelog
+        id: changelog
+        uses: ./
+        with:
+          previousReleaseTagNameOrSha: ${{ github.event.inputs.previousReleaseTagNameOrSha }}
+          nextReleaseTagName: ${{ github.event.inputs.nextReleaseTagName }}
+          nextReleaseName: ${{ github.event.inputs.nextReleaseName }}
+          commits: ${{ github.event.inputs.commits }}
+
+      - name: Echo changelog
+        run: |
+          # add new changelog to the beginning
+          echo << 'EOF'
+          ${{ steps.changelog.outputs.changelog }}
+          EOF

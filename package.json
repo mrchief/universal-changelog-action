@@ -4,10 +4,12 @@
   "description": "",
   "source": "index.js",
   "main": "dist/index.js",
+  "files": [
+    "templates/**"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "ncc build index.js -m",
-    "postbuild": "cpy lib/templates dist/templates",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,7 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
-    "cpy-cli": "^3.1.1",
+    "jest": "^26.2.2",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
@@ -23,5 +25,10 @@
     "@actions/github": "^4.0.0",
     "conventional-commits-parser": "^3.1.0",
     "handlebars": "^4.7.6"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/test/setEnvVars.js"
+    ]
   }
 }
