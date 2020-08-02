@@ -1,4 +1,11 @@
 # 1.1.0 - 2-8-2020
+
+## Unclassified Changes
+
+- debug: Can't pass long strings thru the UI
+
+## Changes
+
 ### Bug Fixes
     
 - Checkout so that files are available
