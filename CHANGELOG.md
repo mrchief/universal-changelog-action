@@ -10,6 +10,7 @@
 
 ### Bug Fixes
     
+- Specify correct path when used externally
 - Include templates for install
 - Move templates to root so path matches during dev/release
 - Handle non conventional commits
