@@ -1,6 +1,7 @@
 # 1.1.0 - 2-8-2020
 ### Bug Fixes
     
+- Checkout so that files are available
 - Correct path of template
 - Export method
 - Remove filter as we no longer use conventional-commit-filter
