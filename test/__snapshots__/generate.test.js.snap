@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`generates changelog 1`] = `
-"## [2020-08-02T034148Z](https://github.com/owner/repo/releases/tag/2020-08-02T034148Z)
-
-## Release 2020-08-02T034148Z
+"## [Release 2020-08-02T034148Z](https://github.com/owner/repo/releases/tag/2020-08-02T034148Z)
 
 ### ✨ Features
 
