@@ -11,6 +11,7 @@
 ### Bug Fixes
     
 - Alternate approach to ensure template can be located
+- Alternate approach to ensure template can be located
 - Specify correct path when used externally
 - Include templates for install
 - Move templates to root so path matches during dev/release
