@@ -4,8 +4,6 @@ const { generate } = require("./lib/generate")
 async function run() {
   try {
     const commits = JSON.parse(core.getInput("commits"))
-    console.log("r1", core.getInput("commits"))
-    console.log("r2", commits)
     const previousReleaseTagNameOrSha = core.getInput("previousReleaseTagNameOrSha")
     const nextReleaseTagName = core.getInput("nextReleaseTagName")
     const nextReleaseName = core.getInput("nextReleaseName")
