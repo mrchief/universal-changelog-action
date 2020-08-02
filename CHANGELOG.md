@@ -10,6 +10,7 @@
 
 ### Bug Fixes
     
+- Handle non conventional commits
 - Checkout so that files are available
 - Correct path of template
 - Export method
