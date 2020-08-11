@@ -1,3 +1,9 @@
+# 1.1.2 - 11-8-2020
+### Bug Fixes
+    
+- Correctly categorize multiple commit types
+- typo
+
 # 1.1.1 - 2-8-2020
 
 ## Changes
