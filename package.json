@@ -17,6 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
+    "faker": "^4.1.0",
     "jest": "^26.2.2",
     "rimraf": "^3.0.2"
   },
