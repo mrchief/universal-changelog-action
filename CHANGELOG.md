@@ -1,3 +1,8 @@
+# 1.1.3 - 13-8-2020
+### Bug Fixes
+    
+- Update the dist files
+
 # 1.1.2 - 11-8-2020
 ### Bug Fixes
     
