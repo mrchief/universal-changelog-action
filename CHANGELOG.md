@@ -1,3 +1,10 @@
+# 1.1.5 - 3-10-2020
+
+## Changes
+
+### 🧰 Maintenance
+ - bump node-fetch from 2.6.0 to 2.6.1
+ 
 # 1.1.4 - 2-10-2020
 
 ## Changes
