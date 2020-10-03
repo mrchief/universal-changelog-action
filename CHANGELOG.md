@@ -1,5 +1,10 @@
 # 1.1.4 - 2-10-2020
 
+## Changes
+
+### 🧰 Maintenance
+ - bump @actions/core from 1.2.4 to 1.2.6 
+ 
 # 1.1.3 - 13-8-2020
 ### Bug Fixes
     
