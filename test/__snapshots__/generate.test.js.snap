@@ -3,6 +3,7 @@
 exports[`generates changelog 1`] = `
 "## [Release 2020-08-02T034148Z](https://github.com/owner/repo/releases/tag/2020-08-02T034148Z)
 
+
 ### ✨ Features
 
 - If we parse the application, we can get to the JSON panel through the 1080p JSON array! ([\`50b1c2a\`](https://github.com/acme/foo/commit/50b1c2ae17634194843ca38b0b69993e))
@@ -11,6 +12,8 @@ exports[`generates changelog 1`] = `
 ### 🐛 Fixes
 
 - Use the 1080p HTTP card, then you can input the optical program! ([\`484edcb\`](https://github.com/acme/foo/commit/484edcb1e9154eb3bf861edd35d96c4b))
+
+
 
 ### 🛠 Maintenance
 
@@ -27,5 +30,6 @@ exports[`generates changelog 1`] = `
 - navigating the interface won't do anything, we need to transmit the digital THX card! ([\`59ce0fc\`](https://github.com/acme/foo/commit/59ce0fcbdefb4b8487319126bb877a04))
 - We need to generate the bluetooth JBOD matrix! ([\`da66679\`](https://github.com/acme/foo/commit/da666790429b4757b60bcd2eb4d05435))
 - We need to back up the online PCI interface! ([\`e836705\`](https://github.com/acme/foo/commit/e836705301dc4e93a3c515e5d083d731))
+
 "
 `;

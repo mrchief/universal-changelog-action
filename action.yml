@@ -5,8 +5,6 @@ branding:
   icon: "book"
   color: "blue"
 inputs:
-  commits:
-    description: "List of Commits (https://developer.github.com/v3/repos/commits/#list-commits)"
   previousReleaseTagNameOrSha:
     description: "Tag Name or SHA of previous release"
   nextReleaseTagName:
