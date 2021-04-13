@@ -10,7 +10,7 @@ async function run() {
     const previousReleaseTagNameOrSha = core.getInput("previousReleaseTagNameOrSha")
     const nextReleaseTagName = core.getInput("nextReleaseTagName")
     const nextReleaseName = core.getInput("nextReleaseName")
-    const configPath = core.getInput("configPath")
+    const configPath = core.getInput("configFilePath")
     
     let commits
     const commitsJSON = core.getInput("commits")
