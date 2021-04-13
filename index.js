@@ -12,11 +12,17 @@ async function run() {
     const nextReleaseName = core.getInput("nextReleaseName")
     const configPath = core.getInput("configPath")
     
-    const commits = (await octokit.repos.compareCommits({
-      ...github.context.repo,
-      base: previousReleaseTagNameOrSha,
-      head: nextReleaseTagName,
-    })).data.commits;
+    let commits
+    const commitsJSON = core.getInput("commits")
+    if (commitsJSON) {
+      commits = JSON.parse(commitsJSON)
+    } else {
+      commits = (await octokit.repos.compareCommits({
+        ...github.context.repo,
+        base: previousReleaseTagNameOrSha,
+        head: nextReleaseTagName,
+      })).data.commits;
+    }
 
     const changelog = await generate({
       nextReleaseTagName,

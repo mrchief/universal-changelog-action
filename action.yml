@@ -5,6 +5,9 @@ branding:
   icon: "book"
   color: "blue"
 inputs:
+  commits:
+    description: "List of Commits (https://developer.github.com/v3/repos/commits/#list-commits), only provide if you don't want commits auto-detected"
+    required: false
   previousReleaseTagNameOrSha:
     description: "Tag Name or SHA of previous release"
   nextReleaseTagName:
