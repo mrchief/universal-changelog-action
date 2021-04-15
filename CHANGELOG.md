@@ -1,3 +1,10 @@
+# 1.2.1 - 15-4-2021
+
+## Changes
+
+### 📚 Docs
+ - add examples for optional commits 
+
 # 1.2.0 - 15-4-2021
 ### Features
     
