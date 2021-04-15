@@ -1,3 +1,8 @@
+# 1.2.0 - 15-4-2021
+### Features
+    
+- auto fetch commits from provided refs ([#17](https://github.com/mrchief/universal-changelog-action/issues17))
+
 # 1.1.5 - 3-10-2020
 
 ## Changes
