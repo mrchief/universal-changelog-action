@@ -1,13 +1,28 @@
 const core = require("@actions/core")
+const github = require('@actions/github')
+const { Octokit } = require("@octokit/rest")
 const { generate } = require("./lib/generate")
 
 async function run() {
   try {
-    const commits = JSON.parse(core.getInput("commits"))
+    const octokit = new Octokit();
+
     const previousReleaseTagNameOrSha = core.getInput("previousReleaseTagNameOrSha")
     const nextReleaseTagName = core.getInput("nextReleaseTagName")
     const nextReleaseName = core.getInput("nextReleaseName")
-    const configPath = core.getInput("configPath")
+    const configPath = core.getInput("configFilePath")
+    
+    let commits
+    const commitsJSON = core.getInput("commits")
+    if (commitsJSON) {
+      commits = JSON.parse(commitsJSON)
+    } else {
+      commits = (await octokit.repos.compareCommits({
+        ...github.context.repo,
+        base: previousReleaseTagNameOrSha,
+        head: nextReleaseTagName,
+      })).data.commits;
+    }
 
     const changelog = await generate({
       nextReleaseTagName,
