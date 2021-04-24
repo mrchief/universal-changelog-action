@@ -1,0 +1,44 @@
+# Simple workflow that automates
+#   - automatically fetches the commits based on previous/next tags
+#   - generating a changelog from those commits
+#   - create a draft release on github using the changelog
+#
+name: Auto Release
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set next release name
+        run: |
+          # ISO8601 UTC timestamp (without colons, filesafe)
+          echo "::set-env name=NEXT_TAG_NAME::$(date -u +%FT%H%M%SZ)"
+          echo "::set-env name=NEXT_RELEASE_NAME::$(date -u '+%F %TZ') "
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Changelog
+        id: changelog
+        uses: ./.github/actions/changelog-generator
+        with:
+          previousReleaseTagNameOrSha: ${{ fromJSON(steps.release.outputs.tag).name }}
+          nextReleaseTagName: ${{ env.NEXT_TAG_NAME }}
+          nextReleaseName: ${{ env.NEXT_RELEASE_NAME }}
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.NEXT_RELEASE_NAME }}
+          release_name: Release ${{ env.NEXT_RELEASE_NAME }}
+          body: ${{ steps.changelog.outputs.changelog }}
+          draft: true
+          prerelease: false

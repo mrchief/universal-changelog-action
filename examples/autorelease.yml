@@ -1,3 +1,8 @@
+# Advanced workflow that
+#   - fetches the commits based on custom requirements
+#   - generating a changelog from those commits
+#   - create a draft release on github using the changelog
+#
 name: Auto Release
 
 on:

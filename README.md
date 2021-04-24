@@ -17,11 +17,13 @@ Changelog in markdown format
 ```
 uses: actions/changelog-generator
 with:
-  commits: [{...}, {...}]
   previousReleaseTagNameOrSha: '2020-07-23T182745'
   nextReleaseTagName: '2020-07-24T093154'
   nextReleaseName: 'Release 2020-07-24'
+  commits: [{...}, {...}]
 ```
+
+`commits` is optional. If skipped, it fetches commits from `previousReleaseTagNameOrSha` till latest ref. See [examples](./examples) for sample workflows.
 
 ## Configuration
 
