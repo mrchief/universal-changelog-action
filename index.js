@@ -17,11 +17,16 @@ async function run() {
     if (commitsJSON) {
       commits = JSON.parse(commitsJSON)
     } else {
-      commits = (await octokit.repos.compareCommits({
-        ...github.context.repo,
-        base: previousReleaseTagNameOrSha,
-        head: nextReleaseTagName,
-      })).data.commits;
+      commits = await octokit.paginate(
+        octokit.repos.compareCommits,
+        {
+          ...github.context.repo,
+          base: previousReleaseTagNameOrSha,
+          head: nextReleaseTagName,
+          per_page: 100,
+        },
+        (response) => response.data.commits
+        );
     }
 
     const changelog = await generate({
