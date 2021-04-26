@@ -1,3 +1,8 @@
+# 1.3.0 - 26-4-2021
+### Features
+    
+- paginating commits from refs ([#21](https://github.com/mrchief/universal-changelog-action/issues21))
+
 # 1.2.1 - 15-4-2021
 
 ## Changes
