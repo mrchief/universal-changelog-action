@@ -4,6 +4,7 @@ const { Octokit } = require("@octokit/rest")
 const { generate } = require("./lib/generate")
 
 async function run() {
+  core.debug('Starting...')
   try {
     const octokit = new Octokit();
 
@@ -41,6 +42,7 @@ async function run() {
     core.setOutput("changelog", changelog)
   } catch (error) {
     core.debug(error.stackTrace)
+    core.debug(error.message)
     core.setFailed(error.message)
   }
 }
