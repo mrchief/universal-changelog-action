@@ -38,7 +38,7 @@ async function run() {
     })
     core.setOutput("changelog", changelog)
   } catch (error) {
-    core.setFailed(error.message)
+    core.setFailed(JSON.stringify(error))
   }
 }
 
