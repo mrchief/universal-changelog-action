@@ -15,8 +15,10 @@ async function run() {
     let commits
     const commitsJSON = core.getInput("commits")
     if (commitsJSON) {
+      core.debug('Received commits')
       commits = JSON.parse(commitsJSON)
     } else {
+      core.debug('Fetching commits')
       commits = await octokit.paginate(
         octokit.repos.compareCommits,
         {
@@ -28,7 +30,7 @@ async function run() {
         (response) => response.data.commits
         );
     }
-
+    core.debug('Generating changelog')
     const changelog = await generate({
       nextReleaseTagName,
       previousReleaseTagNameOrSha,
@@ -38,7 +40,8 @@ async function run() {
     })
     core.setOutput("changelog", changelog)
   } catch (error) {
-    core.setFailed(JSON.stringify(error))
+    core.debug(error.stackTrace)
+    core.setFailed(error.message)
   }
 }
 
