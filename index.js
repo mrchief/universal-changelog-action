@@ -19,15 +19,12 @@ async function run() {
       commits = JSON.parse(commitsJSON)
     } else {
       core.debug(`Fetching commits from ${previousReleaseTagNameOrSha}`)
-      commits = await octokit.paginate(
-        octokit.repos.listCommits,
-        {
-          ...github.context.repo,
-          sha: previousReleaseTagNameOrSha,
-          per_page: 100,
-        },
-        (response) => response.data.commits
-      )
+      const options = {
+        ...github.context.repo,
+        per_page: 100,
+      }
+      if (previousReleaseTagNameOrSha) options.sha = previousReleaseTagNameOrSha
+      commits = await octokit.paginate(octokit.repos.listCommits, options, (response) => response.data.commits)
     }
     core.debug('Generating changelog')
     const changelog = await generate({
