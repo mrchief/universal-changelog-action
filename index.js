@@ -19,6 +19,7 @@ async function run() {
       commits = JSON.parse(commitsJSON)
     } else {
       core.debug(`Fetching commits from ${previousReleaseTagNameOrSha}`)
+      console.log(`Fetching commits from ${previousReleaseTagNameOrSha}`)
       const options = {
         ...github.context.repo,
         per_page: 100,
