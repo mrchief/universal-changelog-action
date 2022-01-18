@@ -1,3 +1,12 @@
+# 1.3.2 - 17-1-2022
+### Bug Fixes
+    
+#### config
+    
+- add missing import to prevent failure with `setupFile` ([#35](https://github.com/mrchief/universal-changelog-action/issues35))
+
+
+
 # 1.3.1 - 22-9-2021
 
 # 1.3.0 - 26-4-2021
